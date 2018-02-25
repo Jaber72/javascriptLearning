@@ -17,7 +17,8 @@ function dontPanic(location) {
 
   // loop through the rangers and append to list
   for(var i=1; i <= location.numRangers ; i++) {
-		list+=location["ranger"+i]["name"] + ", man the " + 		location.weaponBulbs[i-1][0] + "!\n";
+    list+=location["ranger"+i]["name"] + ", man the " + location.weaponBulbs[location["ranger"+i].station-1][0] 
+    + "!\n";
   }
 
   console.log(list);
